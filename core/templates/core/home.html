@@ -1,0 +1,223 @@
+{% extends 'core/base.html' %} 
+{% block title %}Home{% endblock %} 
+{% block header %}
+{% load static %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 align-self-center">
+      <div class="caption header-text">
+        <h6>Bienvenido a Yami no Game Store</h6>
+        <h2>
+          El mejor lugar para comprar videojuegos y articulos coleccionables!
+        </h2>
+        <p>
+          LUGX Gaming is free Bootstrap 5 HTML CSS website template for your
+          gaming websites. You can download and use this layout for commercial
+          purposes. Please tell your friends about TemplateMo.
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-4 offset-lg-2">
+      <div class="right-image">
+        <img src="{% static 'core/images/banner-image.jpg' %}" alt="" />
+        <span class="price">$22</span>
+        <span class="offer">-40%</span>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} 
+{% block content %}
+{% load static %}
+<div class="section trending">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="section-heading">
+          <h6>Tendencia</h6>
+          <h2>Productos en tendencia</h2>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="main-button">
+          <a href="{% url 'shop' %}">Ver todos</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="item">
+          <div class="thumb">
+            <img src="{% static 'core/images/trending-01.jpg' %}" alt=""/>
+          </div>
+          <div class="down-content">
+            <span class="category">Action</span>
+            <h4>Warframe</h4>
+            <hr>
+            <h5>29$</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="item">
+          <div class="thumb">
+            <img src="{% static 'core/images/trending-02.jpg' %}" alt=""/>
+          </div>
+          <div class="down-content">
+            <span class="category">JRPG</span>
+            <h4>Genshin Impact</h4>
+            <hr>
+            <h5>44$</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="item">
+          <div class="thumb">
+            <img src="{% static 'core/images/trending-03.jpg' %}" alt=""/>
+          </div>
+          <div class="down-content">
+            <span class="category">Shooter</span>
+            <h4>Super People</h4>
+            <hr>
+            <h5>44$</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="item">
+          <div class="thumb">
+            <img src="{% static 'core/images/trending-04.jpg' %}" alt=""/>
+          </div>
+          <div class="down-content">
+            <span class="category">CardGame</span>
+            <h4>Yu-gi-oh! Master Duel</h4>
+            <hr>
+            <h5>32$</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section most-played">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="section-heading">
+          <h6>TOP MEJORES JUEGOS</h6>
+          <h2>Los mas jugados</h2>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="main-button">
+          <a href="{% url 'shop' %}">Ver Todos</a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="item">
+          <div class="thumb">
+            <img src="{% static 'core/images/top-game-01.jpg' %}" alt=""/>
+          </div>
+          <div class="down-content">
+            <span class="category">Action</span>
+            <h4>Warframe</h4> 
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="item">
+          <div class="thumb">
+            <img src="{% static 'core/images/top-game-02.jpg' %}" alt=""/>
+          </div>
+          <div class="down-content">
+            <span class="category">Shooter</span>
+            <h4>PUBG</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="item">
+          <div class="thumb">
+            <img src="{% static 'core/images/top-game-03.jpg' %}" alt=""/>
+          </div>
+          <div class="down-content">
+            <span class="category">Shooter</span>
+            <h4>Apex Legends</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="item">
+          <div class="thumb">
+            <img src="{% static 'core/images/top-game-04.jpg' %}" alt=""/>
+          </div>
+          <div class="down-content">
+            <span class="category">Roleplay</span>
+            <h4>Sims 4</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="item">
+          <div class="thumb">
+            <img src="{% static 'core/images/top-game-05.jpg' %}" alt=""/>
+          </div>
+          <div class="down-content">
+            <span class="category">RPG</span>
+            <h4>Lost Arc</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="item">
+          <div class="thumb">
+            <img src="{% static 'core/images/top-game-06.jpg' %}" alt=""/>
+          </div>
+          <div class="down-content">
+            <span class="category">Shooter</span>
+            <h4>Destiny 2</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="shop">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-heading">
+                <h6>Nuesta Tienda</h6>
+                <h2>Tenemos precios asombrosos y <em>baratos</em> para ti!</h2>
+              </div>
+              <p>
+                Lorem ipsum dolor consectetur adipiscing, sed do eiusmod tempor
+                incididunt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 offset-lg-2 align-self-end">
+        <div class="subscribe">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-heading">
+                <h6>Servicio excelente</h6>
+                <h2>
+                  Te antenderemos de la manera mas eficaz y siempre con el
+                  <em>respeto</em> debido
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

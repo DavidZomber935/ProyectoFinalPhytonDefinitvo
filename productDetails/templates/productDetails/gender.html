@@ -1,0 +1,46 @@
+{% extends 'core/base.html' %} 
+
+{% block title %}Detalles del producto{% endblock %}
+
+{% block header %}
+<h1><center>Detalles del producto</center></h1>
+{% endblock %} 
+{% block content %}
+<!--{{listproductsDetails}}-->
+{% load static %}
+{% for productDetails in listproductsDetails%}
+<div class="single-product section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="left-image">
+          <img src="{{productDetails.image.url}}" alt="">
+        </div>
+      </div>
+      <div class="col-lg-6 align-self-center">
+        <h4>{{productDetails.title}}</h4>
+        <hr>
+        <h5>Reseña:</h5>
+        <p>{{productDetails.review}}</p>
+        <hr>
+        <span>Reseña hecha por:</span>
+        <br>
+        {{productDetails.author}}
+        <hr>
+        <span>Genero:</span>
+        {% for Gender in productDetails.genders.all %}
+        <a href="{% url 'gender' Gender.id %}" class="link">{{Gender.name}} {% if not forloop.last%},{% endif %}</a>
+        {% endfor %} 
+        <hr>
+        <h5>precio sugerido:</h5>
+        <span class="price">{{productDetails.price}}$</span>
+      </div>
+      <div class="col-lg-12">
+        <div class="sep"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %} 
